@@ -44,8 +44,6 @@ public class Interaction extends Base
 
 
 	public void  WaitForPageToLoad() {
-
-		WebDriverWait wait = new WebDriverWait(driver, 300);
 		pageLoadStatus = (String)js.executeScript("return document.readyState");
 	}
 

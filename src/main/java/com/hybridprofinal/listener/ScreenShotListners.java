@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 
 import com.hybridprofinal.initiate.Base;
 
-public class Listners implements ITestListener
+public class ScreenShotListners implements ITestListener
 {
 	Base base = new Base();
 	String filePath = "./src/test/resources/ScreenShot";

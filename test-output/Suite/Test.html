@@ -1,30 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" total="4" passed="0">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite" duration-ms="90772" started-at="2019-07-28T04:44:32Z" finished-at="2019-07-28T04:46:03Z">
-    <groups>
-    </groups>
-    <test name="Test" duration-ms="90772" started-at="2019-07-28T04:44:32Z" finished-at="2019-07-28T04:46:03Z">
-      <class name="com.hybridprofinal.test.VerifyLoginTest">
-        <test-method status="PASS" signature="BrowserSetUp()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="BrowserSetUp" is-config="true" duration-ms="5773" started-at="2019-07-28T10:14:33Z" finished-at="2019-07-28T10:14:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BrowserSetUp -->
-        <test-method status="FAIL" signature="VerifyLogin(java.lang.reflect.Method)[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="VerifyLogin" duration-ms="10323" started-at="2019-07-28T10:14:38Z" finished-at="2019-07-28T10:14:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [OrangeHRM1] but found [OrangeHRM]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jul 28 10:14:32 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>90 seconds (90772 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.hybridprofinal.test.VerifyLoginTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: com.hybridprofinal.test.VerifyLoginTest<br>Parameters: public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException</td>
+<td><div><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+	at com.hybridpro.pageobjects.HomePage.VerifyHomePage(HomePage.java:28)
+	at com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(VerifyLoginTest.java:45)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1561502550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1561502550'><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -56,30 +112,16 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="Logout" is-config="true" duration-ms="32132" started-at="2019-07-28T10:14:49Z" finished-at="2019-07-28T10:15:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method status="FAIL" signature="VerifyLogin(java.lang.reflect.Method)[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="VerifyLogin" duration-ms="2568" started-at="2019-07-28T10:15:21Z" finished-at="2019-07-28T10:15:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [OrangeHRM1] but found [OrangeHRM]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+</pre></div></td>
+<td>10</td>
+<td>com.hybridprofinal.test.VerifyLoginTest@3fee9989</td></tr>
+<tr>
+<td title='com.hybridprofinal.test.VerifyLoginTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: com.hybridprofinal.test.VerifyLoginTest<br>Parameters: public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException</td>
+<td><div><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+	at com.hybridpro.pageobjects.HomePage.VerifyHomePage(HomePage.java:28)
+	at com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(VerifyLoginTest.java:45)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace573487274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace573487274'><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -111,30 +153,16 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="Logout" is-config="true" duration-ms="8071" started-at="2019-07-28T10:15:24Z" finished-at="2019-07-28T10:15:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method status="FAIL" signature="VerifyLogin(java.lang.reflect.Method)[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="VerifyLogin" duration-ms="19861" started-at="2019-07-28T10:15:32Z" finished-at="2019-07-28T10:15:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [OrangeHRM1] but found [OrangeHRM]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+</pre></div></td>
+<td>2</td>
+<td>com.hybridprofinal.test.VerifyLoginTest@3fee9989</td></tr>
+<tr>
+<td title='com.hybridprofinal.test.VerifyLoginTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: com.hybridprofinal.test.VerifyLoginTest<br>Parameters: public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException</td>
+<td><div><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+	at com.hybridpro.pageobjects.HomePage.VerifyHomePage(HomePage.java:28)
+	at com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(VerifyLoginTest.java:45)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace589987187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace589987187'><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -166,30 +194,16 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="Logout" is-config="true" duration-ms="3032" started-at="2019-07-28T10:15:52Z" finished-at="2019-07-28T10:15:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method status="FAIL" signature="VerifyLogin(java.lang.reflect.Method)[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="VerifyLogin" duration-ms="3636" started-at="2019-07-28T10:15:55Z" finished-at="2019-07-28T10:15:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [OrangeHRM1] but found [OrangeHRM]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+</pre></div></td>
+<td>19</td>
+<td>com.hybridprofinal.test.VerifyLoginTest@3fee9989</td></tr>
+<tr>
+<td title='com.hybridprofinal.test.VerifyLoginTest.VerifyLogin()'><b>VerifyLogin</b><br>Test class: com.hybridprofinal.test.VerifyLoginTest<br>Parameters: public void com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(java.lang.reflect.Method) throws java.io.IOException,org.json.simple.parser.ParseException</td>
+<td><div><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
+	at com.hybridpro.pageobjects.HomePage.VerifyHomePage(HomePage.java:28)
+	at com.hybridprofinal.test.VerifyLoginTest.VerifyLogin(VerifyLoginTest.java:45)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace843299092", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace843299092'><pre>java.lang.AssertionError: expected [OrangeHRM1] but found [OrangeHRM]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -221,21 +235,9 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyLogin -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="Logout" is-config="true" duration-ms="3255" started-at="2019-07-28T10:15:59Z" finished-at="2019-07-28T10:16:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method status="PASS" signature="CleanUp()[pri:0, instance:com.hybridprofinal.test.VerifyLoginTest@3fee9989]" name="CleanUp" is-config="true" duration-ms="1428" started-at="2019-07-28T10:16:02Z" finished-at="2019-07-28T10:16:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CleanUp -->
-      </class> <!-- com.hybridprofinal.test.VerifyLoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
-</testng-results>
+</pre></div></td>
+<td>3</td>
+<td>com.hybridprofinal.test.VerifyLoginTest@3fee9989</td></tr>
+</table><p>
+</body>
+</html>

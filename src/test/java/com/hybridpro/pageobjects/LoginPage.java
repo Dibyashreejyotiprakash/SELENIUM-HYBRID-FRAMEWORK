@@ -24,12 +24,20 @@ public class LoginPage extends Base
 	public static By loginbtn = By.xpath("//*[@id='btnLogin']");
 	
 	@Test
-	public void VerifyLoginPage()
+	public void VerifyLogin() throws Exception
 	{
-		action.Type(txtusername, "Admin");
-		action.Type(txtpassword,"admin123");
-		action.Click(loginbtn);
-		action.WaitForPageToLoad();
+		try
+		{
+			action.Type(txtusername, "Admin");
+			action.Type(txtpassword,"admin123");
+			action.Click(loginbtn);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Verify Login failed due to "+ e);
+			throw e;
+		}
+		
 		
 	}
 	
