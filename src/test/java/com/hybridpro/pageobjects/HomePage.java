@@ -25,7 +25,7 @@ public class HomePage extends Base
 		{
 			String homepageurl = action.GetTitle();
 			System.out.println("Home Page Title "+ homepageurl);
-			Assert.assertEquals(homepageurl, "OrangeHRM1");
+			Assert.assertEquals(homepageurl, "OrangeHRM");
 			
 		}
 		catch(Exception e)

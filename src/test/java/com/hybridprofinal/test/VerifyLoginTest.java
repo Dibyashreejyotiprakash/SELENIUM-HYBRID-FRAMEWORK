@@ -51,16 +51,7 @@ public class VerifyLoginTest extends Base
 		}
 	}
 	
-	@AfterMethod
-	public void Logout()
-	{
-		try {
-		    homepage.Logout();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
 	
 	
 	
