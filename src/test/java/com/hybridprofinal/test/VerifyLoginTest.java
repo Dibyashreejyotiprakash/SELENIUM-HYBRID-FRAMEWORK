@@ -38,6 +38,7 @@ public class VerifyLoginTest extends Base
 		try
 		{
 			GetUrl("ADMIN");
+			System.out.println("i want to leave pune");
 			logger.info("Application launched");
 			extentTest.log(Status.INFO, result.getName()+"Application launched");
 			loginpage.VerifyLogin();
